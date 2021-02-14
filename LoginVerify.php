@@ -27,6 +27,9 @@ class loginlogic
           return true;  
         }
     }
+	return false;
+    }
+}
 class RegisterLogic
 {
     private $username = "";
