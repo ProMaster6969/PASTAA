@@ -8,6 +8,7 @@
 <?php
 require_once 'Mapper.php';
 include 'header.php';
+require 'contactVerify.php';
 
 
 
@@ -46,6 +47,13 @@ foreach($userat as $user){
     <td><a href=<?php echo"delete.php?ID=".$user['ID'];?>>Delete</td>
         
     </tr>
+    <?php
+}
+?>
+
+
+</table>
+</div>
 	<h1 style="color:green;margin-left:650px;margin-top:100px;">MESSAGES</h1>
 <div id="Mesage">
     <table border="1" style="margin-left:600px;color:green;">
@@ -82,10 +90,3 @@ foreach($dates as $d){
 include 'footer.php';
 ?>
 
-<?php
-}
-?>
-
-
-</table>
-</div>
