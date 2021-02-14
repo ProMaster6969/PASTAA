@@ -1,4 +1,32 @@
 <?php
+
+include_once 'Admin.php';
+include_once 'SimpleUser.php';
+require_once 'Mapper.php';
+
+session_start();
+if (isset($_POST['submit-btn'])) {
+    $login = new loginlogic($_POST);
+    if($login->verifyDB()){
+       header('Location:Projekti.php');
+     
+    }
+    else{
+       
+       header('Location:Register.php');
+    }
+} else if (isset($_POST['register-btn'])) {
+    
+    $register = new RegisterLogic($_POST);
+    $register->verifyData();
+   
+ header('Location:Projekti.php');
+    
+}
+
+   else{
+        header('Location:Register.php');
+    }
 class loginlogic
 {
     private $username ="";
