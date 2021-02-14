@@ -46,6 +46,42 @@ foreach($userat as $user){
     <td><a href=<?php echo"delete.php?ID=".$user['ID'];?>>Delete</td>
         
     </tr>
+	<h1 style="color:green;margin-left:650px;margin-top:100px;">MESSAGES</h1>
+<div id="Mesage">
+    <table border="1" style="margin-left:600px;color:green;">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Message</th>
+            <td><a href=<?php echo"deletemessage.php?ID=".$user['ID'];?>>Delete</td>
+</tr>
+<?php
+$map=new Mapper();
+$dates=$map->getAllbyContact();
+foreach($dates as $d){
+    ?>
+    <tr>
+        <td><?php echo $d['ID'];?></td>
+        <td><?php echo $d['name'];?></td>
+        <td><?php echo $d['message'];?></td>
+        <td><a href=<?php echo"deletemessage.php?ID=".$d['ID'];?>>Delete</td>
+        
+</tr>
+  <?php      
+}
+?>
+
+   
+</table>
+</div>
+
+
+</main>
+</body>
+<?php
+include 'footer.php';
+?>
+
 <?php
 }
 ?>
