@@ -15,5 +15,19 @@ if (isset($_POST['talk-btn'])){
      
    }
 }
+class contactVerify
+{
+    private $username ="";
+    private $email ="";
+    private $message="";
 
+    public function __construct($data)
+    {
+        $this->username = $data['contact-name'];
+        $this->email = $data['contact-email'];
+        $this->message=$data['contact-message'];
+    }
+    
+
+}
 ?>
