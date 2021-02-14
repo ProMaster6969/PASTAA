@@ -27,6 +27,22 @@ class contactVerify
         $this->email = $data['contact-email'];
         $this->message=$data['contact-message'];
     }
+	public function verifyDB(){
+        $messageRegex="/^[a-zA-Z0-9]{5,}$/";
+        $mapper=new Mapper();
+        $users=$mapper->getAllUsers();
+        foreach($users as $u){
+        if($this->username==$u['name'] && $this->email==$u['email']){
+            if(preg_match($messageRegex,$this->message)){
+               $dhanat=[$u['ID'],$u['name'],$this->message];
+            return $dhanat;
+            }
+        }
+    }
+    return false;
+
+
+    }
     
 
 }
