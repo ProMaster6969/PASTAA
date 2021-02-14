@@ -1,4 +1,4 @@
-<?
+<?php
 class loginlogic
 {
     private $username ="";
