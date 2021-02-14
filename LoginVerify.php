@@ -1,4 +1,32 @@
 <?
+class loginlogic
+{
+    private $username ="";
+    private $password ="";
+
+    public function __construct($data)
+    {
+        $this->username = $data['name'];
+        $this->password = $data['password'];
+    }
+    public function verifyDB(){
+        $mapper=new Mapper();
+        $users=$mapper->getUserByUsername($this->username);
+        
+        foreach($users as $u){
+        if($this->username==$u['name'] && password_verify( $this->password,$u['password'])){
+          if ($u['role'] == 0) {
+               
+            $user = new SimpleUser( $u['name'],$u['email'] ,$u['password'], $u['role']);
+            $user->setSession();
+           
+        } else {
+            $user = new Admin( $u['name'],$u['email'] ,$u['password'], $u['role']);
+            $user->setSession();
+        }
+          return true;  
+        }
+    }
 class RegisterLogic
 {
     private $username = "";
