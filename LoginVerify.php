@@ -31,6 +31,49 @@ class RegisterLogic
            
         }
     }
-    //
+    private function variablesNotDefinedWell($username,$email, $password)
+    {
+        if (empty($username) || empty($password) || empty($email)) {
+            return true;
+        }
+        else{
+        return false;
+        }
+    }
+
+    private function usernameandemailandPasswordCorrect($username,$useremail ,$password)
+    {
+        $user=null;
+      
+        $userPattern="/^[a-zA-Z0-9]{3,}$/";
+   $emailPattern="/^[a-zA-Z0-9.!#$%&'*+\=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/";
+   $passwordPattern="/^[a-zA-Z0-9]{8,}$/";
+
+   if(preg_match($userPattern,$username)&& preg_match($passwordPattern,$password)&& preg_match($emailPattern,$useremail)){
+     
+        $user=new Simpleuser( $this->username, $this->useremail,$this->password, 0);
+        
+        
+        
+}
+    if($user!=null){
+        
+        $this->insertData($user);
+        return true;
+    }
+    return false;
+}
+
+
+    
+
+    public function insertData($user)
+    {
+        
+        $mapper = new Mapper();
+        $mapper->insertUser($user);
+       
+    }
+}
 
     ?>
