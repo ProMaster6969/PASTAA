@@ -1,1 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+header{
+/*  background: linear-gradient(90deg, rgba(11,11,11,0.6) 100%, rgba(0,212,255,0.6) 100%),url("HeroPhoto2.jpg");*/
+  color:#ffffff;
+  padding-top:0px;
+  min-height:70px;
+  border-bottom:#ffc760 3px solid;
+}
+h3{
+    font-family: 'Poppins', sans-serif;
+    color: ivory;
+}
+header img{
+    float:left;
+    display:inline;
+    height:100px;
+    width: 100px;
+}
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+  font-family: arial;
+}
+header ,li ,a{
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    height: 110;
+}
+header li{
+    margin-top: 25px;
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
 
+header #branding{
+  float:left;
+}
+
+
+header nav{
+    float:right;
+    
+  }
+  
+header .highlight, header .current a{
+  color:#e48e0d;
+  font-weight:bold;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease 0s;
+}
+  
+header a:hover{
+    color:#cccccc;
+    font-weight:bold;
+    transition: width .3s ;
+    border-bottom: #ea9a21 0.125em solid;
+  }
+
+.container{
+    width:90%;
+    margin:auto;
+    overflow:hidden;
+}
+ 
+
+    
+    .nav-brand{
+        width:3.5rem;
+    }
+    .nav.list{
+        width:initial;
+        height:initial;
+        background-color: transparent;
+        position: initial;
+        top:initial;
+        right:initial;
+        flex-direction: row;
+        transition: initial;
+    }
+    .menu-icons{
+        display: none;
+
+    }
+    .nav-item{
+        margin:0 2.5rem;
+
+    }
+    .nav-link,
+    .current{
+        color:#fafafa;
+        position: relative;
+        font-size: 1.3rem;
+    }
+    .nav-link::before,
+    .current::before{
+        content:"";
+        position: absolute;
+        left:0;
+        bottom:-.5rem;
+        background-color: #eb648c;
+        width:100%;
+        height:2px;
+        transform:scaleX(0);
+        transform-origin:left ;
+        transition:transform 650ms;
+    }
+    .current::before{
+        transform:scaleX(1);
+    }
+    .nav-link:hover::before{
+        transform: scaleX(1)
+
+    }
+    
+    .hero{
+        height:60vh;
+    }
+    .main-message{
+        transform:translateY(50%);
+
+}
+.title-heading h1{
+    font-size:2.5rem;
+}
+
+
+body{
+    background-color: black;
+    margin: 0px;
+    min-width: 1000px;
+}
+#hcontainer{
+    display:flex;
+    flex-direction: row;
+}
+.listat{
+    display:flex;
+    flex-direction:row;
+}
+p{
+    font-size: 1.6rem;
+}
+main{
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+/*-----------------------------pjesa e 1 e body-------------------------------------------------------------*/
+/*section{
+    padding: 3.8rem 0;
+}
+.bcontainer{
+    width: 100%;
+    max-width: 90rem;
+    min-width: 800px;
+    margin: 0 auto;
+
+}*/
+.hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120%;
+    min-width: 800px;
+    min-height: 300px;
+    background: linear-gradient(135deg,rgba(0, 0, 0, 0.29)0%,rgba(4, 4, 7, 0.3)100%),url("Photos/1121.jpg")center no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+
+   
+}
+/*---------------------------------------------pjesa e produkteve -----------------------------------------*/
+.prod{
+    position: relative;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    
+    justify-content: space-around;
+    align-items: center;
+}
+.prod-item{
+    text-align: center;
+    margin-top:50px;
+}
+.item{
+    
+    width: 200px;
+    /* padding: 30px 30 30 0; */
+    height: 200px;
+    border:black 3px solid;
+    background-color: black;
+    /* padding: 30px; */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.butn{
+text-decoration: none;
+width:50px;
+height:50px;
+background-color: green;
+}
+.link{
+    width:150px;
+    height: 50px;
+    background-color: blue;
+}
+
+.b{
+    background-color: red;
+}
+.footer{
+	background-color: #000000;
+	padding: 20px 0px 20px 0px;
+}
+
+.footer h1{
+	color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.footer p{
+	color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+   	font-weight: 200;
+}
+
+.footer ul{
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.footer li{
+	color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    line-height: 24px;
+   	font-weight: 200;
+   	display: flex;  
+       height: 50;
+}
+
+.footer .ndryshe i{
+	color: white;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.footer i{
+	color: #FFD749;
+	padding-right: 10px;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+hr{
+	display: block;
+	height: 1px;
+    border: 0; 
+    border-top: 1px solid #ccc;
+    margin: 1em 0; 
+}
+
+.footer .special{
+	padding-bottom: 20px; 
+}
+
+.footer .special p{
+	color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.footer .special .p1{
+	float:left;
+}
+
+.footer .special .p2{
+	float: right; 
+}
+.row{
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.row img{
+    height: 150px;
+    padding-right: 20px;
+}
+@media screen and (max-width:1024px) {
+
+    header {
+        border-bottom: #ffc760 4px solid;
+        height: 140;
+    }
+    header nav{
+        padding-top: 15px;
+    }
+    header .highlight, header .current a {
+        font-size: 22px;
+    }
+ 
+    .footer h1{
+        font-size: 25px;
+    }
+    .footer li{
+        font-size: 20;
+        height: auto;
+    }
+    .row img {
+        height: 200px;
+        width: 200px;
+    }
+    .footer p {
+        font-size: 22px;
+    }
+    .footer .special p {
+        font-size: 15px;
+    }
+    header img {
+        height: 130px;
+        width: 130px;
+    }
+    .testimonial-photo h1 {
+        font-size: 30;
+    }
+    .hero {
+        height: auto;
+    }
+    
+}
