@@ -21,7 +21,7 @@ const emailReg=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]
 const mesageReg=/^[a-zA-Z0-9]{5,}$/;
 
  var sub=document.getElementById('submit');
- sub.addEventListener('click',function(event){
+ sub.addEventListener('submit',function(event){
     let date=document.getElementsByClassName("int");
      username= date[0].value;
    password= date[1].value;
