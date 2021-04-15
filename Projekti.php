@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="Styli.css" type="text/css"/>
+        <link rel="stylesheet" href="Styli.css?ts=<?=time()?>" type="text/css"/>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <title>Home</title>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap" rel="stylesheet">
@@ -8,70 +8,79 @@
     </head>
 <body>
     <?php
+    require_once 'Mapper.php';
     include 'header.php';
+    $mapper=new Mapper();
+    $p=$mapper->getProjekti(1)['text'];
+    
+   
 
     ?>
     <main>
-        <section class="hero"> 
-            <div class="bcontainer">
-                <div class="mesazhi-kryesor">
-                   <h3>Pull up a chair. Take a taste. Come join us. Life is so endlessly delicious</h3>
-                   <h1>Welcome</h1>
-                   <p>
-                    The official website of PASTA FASTA, where you will be notified about
-                    our products, services, and weekly offers.</br>
-                    If you want to make a reservation click on the <b> "BOOK NOW" button </b>, and keep in mind that: <br> <br> <b> "LIFE IS A COMBINATION
-                    OF MAGIC AND PASTA "</b>
-                   </p>
-                </div>
-            </div>
-           <div class="cta">
+    <?php
+    echo "php";
+        echo "<section class=\"hero\"> ";
+          echo "<div class=\"bcontainer\">";
+             echo "  <div class=\"mesazhi-kryesor\">";
+             echo "   <h3>$p</h3>";
+            
              
-           </div>
+               
+
+                  echo $mapper->getProjekti(3)['text'];
+                  echo $mapper->getProjekti(4)['text'];
+                  echo $mapper->getProjekti(5)['text'];
+               echo " </div>"
+            ."</div>"
+           ."<div class=\"cta\">";
+             
+           echo "</div>";
+           
           
-   </section>
-   <section class="experience-outdores">
-       <div class="bcontainer">
-           <div class="title-heading">
+  echo" </section>".
+   "<section class=\"experience-outdores\">".
+      " <div class=\"bcontainer\">".
+           "<div class=\"title-heading\">";
               
-               <h1>Big Pasta Trio</h1>
-               <p>ENJOY "THE MOST WANTED" OF PASTA</p>
-               <hr class="solid">
-           </div>
-           <div class="activities-grid">    
-                <div class="activities-grid-item arrabiata">
-                   <p>ARRABIATA</p>
+               
+          echo $mapper->getProjekti(6)['text'];
+          echo $mapper->getProjekti(7)['text'];
+              echo " <hr class=\"solid\">".
+          " </div>"
+           ."<div class=\"activities-grid\"> ".   
+                "<div class=\"activities-grid-item arrabiata\">";
+                   echo $mapper->getProjekti(8)['text'];
                    
-                 </div>
-                 <div class="activities-grid-item chicken">
-                    <p>CHICKEN CURRY</p>
-                </div>
-                <div class="activities-grid-item napoleoni">
-                    <p>NAPOLEONI</p>
-                </div>
+                echo " </div>".
+                 "<div class=\"activities-grid-item chicken\">".$mapper->getProjekti(9)['text'].
+                    
+               " </div>";
+               
+                echo "<div class=\"activities-grid-item napoleoni\">";
+                    echo $mapper->getProjekti(10)['text'];
+               echo " </div>";
 
-           </div>
-       </div>
-   </section>
+          echo " </div>".
+       "</div>".
+  " </section>".
 
 
-   <section class="testimonials">
-    <div class="bcontainer"> 
-           <div class="testimonial">
-             <div class="testimonial-text-box">
-                <i class='fas fa-quote-right fa1'>"</i>
-              <p><b>A LOT OF RESTAURANTS SERVE GOOD FOOD,BUT THEY DON'T HAVE VERY GOOD SERVICE.
-                 <BR>LET YOUR SERVICE REMINDE THEM THIER HOME</b>
-              </p>
+   "<section class=\"testimonials\">".
+    "<div class=\"bcontainer\">". 
+           "<div class=\"testimonial\">"
+            ." <div class=\"testimonial-text-box\">".
+              " <i class=\'fas fa-quote-right fa1\'>\"</i>";
+              echo $mapper->getProjekti(11)['text'];
               
-              </div>
-              <div class="testimonial-photo">
-                 <img src="Photos/Gordon.jpg" alt=""/>
-                 <h1>Gordon Ramsey</h1>
-              </div>
-          </div>
-    </div>
-</section>
+            echo " </div>".
+              "<div class=\"testimonial-photo\">".
+                 "<img src=\"Photos/Gordon.jpg\" />".
+                 $mapper->getProjekti(12)['text'].
+              "</div>".
+         " </div>".
+    "</div>".
+"</section>";
+?>
 
     </main>
    <?php
