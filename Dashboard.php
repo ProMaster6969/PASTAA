@@ -54,6 +54,18 @@ foreach($userat as $user){
 
 </table>
 </div>
+<div class="edites">
+
+    <?php
+    echo "<h3 >EDITS</h3>";
+    $edites=$map->getedits();
+    foreach($edites as $edit){
+        echo $edit['username']." has edit product with id  ".$edit['id']." on ".$edit['time']."<br/>";
+    }
+
+    ?>
+
+</div>
 	<h1 style="color:green;margin-left:650px;margin-top:100px;">MESSAGES</h1>
 <div id="Mesage">
     <table border="1" style="margin-left:600px;color:green;">
