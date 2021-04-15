@@ -6,7 +6,7 @@ const messageRegex=/^[a-zA-Z0-9]{5,}$/;
 var contact=document.getElementById("letstalk");
 var datee=document.getElementsByClassName('contact-input');
 
- contact.addEventListener('click',function(event){
+ contact.addEventListener('submit',function(event){
   // event.preventDefault();
   namee=datee[0].value;
   mail=datee[1].value;
