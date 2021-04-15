@@ -54,16 +54,7 @@ foreach($userat as $user){
 
 </table>
 </div>
-<div class="edites">
 
-    <?php
-    echo "<h3 >EDITS</h3>";
-    $edites=$map->getedits();
-    foreach($edites as $edit){
-        echo $edit['username']." has edit product with id  ".$edit['id']." on ".$edit['time']."<br/>";
-    }
-
-    ?>
 
 </div>
 	<h1 style="color:green;margin-left:650px;margin-top:100px;">MESSAGES</h1>
@@ -94,11 +85,35 @@ foreach($dates as $d){
    
 </table>
 </div>
+<div class="edites">
 
+    <?php
+    echo "<h3 >EDITS</h3>";
+    $edites=$map->getedits();
+    foreach($edites as $edit){
+        echo $edit['username']." has edit product with id  ".$edit['id']." on ".$edit['time']."<br/>";
+    }
 
-</main>
-</body>
+    ?>
+<div class="added">
+
 <?php
-include 'footer.php';
-?>
+
+echo "<h3>ADDED</h3>";
+$addeed=$map->getadded();
+    foreach($addeed as $added){
+        echo $added['username']." has add new product called  ".$added['prodname']." on ".$added['time']."<br/>";
+    }
+    ?>
+</div>
+</main>
+
+
+
+
+</body>
+</html>
+
+
+
 
