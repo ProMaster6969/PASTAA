@@ -1,6 +1,6 @@
 <html>
     <head>
-            <link rel="stylesheet" href="aboutt.css" type="text/css"/>
+            <link rel="stylesheet" href="aboutt.css?ts=<?=time()?>" type="text/css"/>
             <link rel="preconnect" href="https://fonts.gstatic.com">
             <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap" rel="stylesheet">
             <title>About</title>
@@ -12,69 +12,61 @@
     <body>
     <?php
  include 'header.php';
+ require_once "Mapper.php";
+ $mapper=new Mapper();
 
 ?>
+<?php
+    echo"<main>"
+       ." <section class=\"hero\"> ".
+            "<div class=\"bcontainer\">".
+               " <div class=\"mesazhi-kryesor\">";
 
-    <main>
-        <section class="hero"> 
-            <div class="bcontainer">
-                <div class="mesazhi-kryesor">
-                  <h1>OUR HISTORY</h1>
-                   <h3>
-       
-Restoranti ishte i suksesshëm që nga fillimi, me darka të etura ndonjëherë duke pritur orë të tëra për një mundësi për të darkuar në stilin familjar.
-Recetat ishin klasike të thjeshta, autentike, shumë prej tyre nxirreshin nga gjyshet, nënat dhe hallat italiane,
- idetë e të cilave për një recetë ishin një copëz e kësaj dhe një spërkatje e kësaj. Me disa prova dhe gabime, 
-shefat e kuzhinierëve festuan lindjen e shumë pjatave të nënshkrimit të Maggiano.
-        <H2>LIFE IS A COMBINATION OF MAGIC AND PASTA"</H2>
-                   </h3>
-                </div>
-            </div>
+                 echo $mapper->getAbout(1)['text'];
+                echo $mapper->getAbout(2)['text'].
+                $mapper->getAbout(3)['text'].$mapper->getAbout(4)['text'];
+
+              echo " </div>".
+            "</div>".
          
           
-   </section>
-   <section class="services container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-lg-4 colum">
-                <span class="servicesicon"><i aria-hidden="true" class="fas fa-trophy"></i></span>
-                <h1>Client Trust</h1>
-                <p>Ne përqendrohemi në marrëdhënie të forta me klientët, të ndërtuara mbi besimin e ndërsjellë, bashkëpunimin dhe komunikimin e hapur. Ne ndërthurim rekordin tonë të pashembullt dhe metodat e provuara të dorëzimit me një kulturë të shpejtë, duke u siguruar që të ofrojmë vende të lulëzuara që janë po aq të përgjegjshme dhe elastike sa dhe banorët e tyre.</p>
-                
-            </div>
-            <div class="col-md-4 col-lg-4 colum">
-                <span class="servicesicon"><i aria-hidden="true" class="far fa-handshake"></i></span>
-                <h1>Professionalism</h1>
-                <p>Ne tregojmë profesionalizëm duke ofruar shërbime cilësore,  shërbime të jashtëzakonshme ndaj klientit dhe duke përfunduar porosinë në kohë. Përmes këtyre atributeve, ne mund të përpunojmë zgjidhje të saktë dhe të ekzekutojmë një rezultat të koordinuar.</p>
-                
-            </div>
-            <div class="col-md-4 col-lg-4 colum">
-                <span class="servicesicon"><i aria-hidden="true" class="fab fa-sketch"></i></span>
-                <h1>Efficiency</h1>
-                <p>Bejm pregaditjen e pastave nga me të ndryshmet , duke ofruar shije dhe melmesa te cilat nuk i keni imagjinuar më parë qe egzistojnë ,e gjitha kjo ne fund sherbehet me buzqeshjen e puntoreve tonë..</p>
-                
-            </div>
-        </div>
-    </div>
-</section>
-  <section class="Mesazhi2">
-        <div class="hero2">
-            <div class="p1">
-                <h1>"Arguably the best pasta on earth"</h1>
-                <p>I have eaten in a lot of restaurants all over the world , and now I can categorically state that 
-                    this is the best by so far.</br> The service is exceptional and the greeting and attention to detail form the manager is phenomenal,
-
-                </p> 
-            </div>
-            <div class="p2">
+   "</section>".
+   "<section class=\"services container-fluid\">".
+    "<div class=\"container\">".
+        "<div class=\"row\">".
+           " <div class=\"col-md-4 col-lg-4 colum\">".
+               " <span class=\"servicesico\"><i aria-hidden=\"true\" class=\"fas fa-trophy\"></i></span>";
+             echo $mapper->getAbout(5)['text'].$mapper->getAbout(6)['text'].$mapper->getAbout(7)['text'];
                
-                <img class="imgsrc" src="Photos/massimo.jpg" >
-            </div>
-        </div>
-  </section>
+                
+           echo " </div>".
+            "<div class=\"col-md-4 col-lg-4 colum\">".
+                "<span class=\"servicesicon\"><i aria-hidden=\"true\" class\"far fa-handshake\"></i></span>".$mapper->getAbout(8)['text'];
+               echo $mapper->getAbout(9)['text'].$mapper->getAbout(10)['text'];
+           echo " </div>".
+            "<div class=\"col-md-4 col-lg-4 colum\">".
+               "<span class=\"servicesicon\"><i aria-hidden=\"true\" class=\"fab fa-sketch\"></i></span>";
+                echo $mapper->getAbout(11)['text'].$mapper->getAbout(12)['text'];
+                
+           echo " </div>".
+        "</div>".
+   " </div>".
+"</section>".
+  "<section class=\"Mesazhi2\">".
+       " <div class=\"hero2\">".
+            "<div class=\"p1\">";
+              echo $mapper->getAbout(13)['text'].$mapper->getAbout(14)['text'].$mapper->getAbout(15)['text'];
+           echo "</div>".
+            "<div class=\"p2\">".
+               
+               "<img class=\"imgsrc\" src=\"Photos/massimo.jpg\" >".
+            "</div>".
+        "</div>".
+  "</section>"
 
 
-    </main>
+   ." </main>";
+   ?>
   <?php
  include 'footer.php';
   ?>
