@@ -178,13 +178,44 @@ main{
     background-color: black;
     color:green;
 }
+.dash{
+    color:green;
+    margin-left:590px;
+    font-size:60pt
+}
+.userl{
+    color:green;margin-left:720px;margin-top:100px;
+}
+.tabl1{
+    color:green;margin-left:350px;
+}
 
 /*-----------------------------pjesa e footer-------------------------------------------------------------*/
 
+.edites{
+    margin-left: 500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+main{
+    margin-bottom: 150px;
+}
+.added{
+    margin-left: 500px;
+    margin-top: 50px;
+    margin-bottom: 250px;
+}
 .footer{
-	background-color:black;
+    margin:0;
+    padding:0;
+
+}
+
+.footer{
+	background-color: #000000;
 	padding: 20px 0px 20px 0px;
 }
+
 
 .footer h1{
 	color: #FFFFFF;
@@ -304,188 +335,7 @@ hr{
         font-size: 30;
     }
     .hero {
-        height: 80%;
-    }
-    .form-box {
-        width: 430px;
-        height: 500px;
-        top: 90;
-        position: relative;
-        margin: 0% auto;
-        padding: 5px;
-        background: #fff;
-        overflow: hidden;
-        border-radius: 40px;
-    }
-    #btn {
-        top: 20;
-        padding: 4px;
-        left: 60px;
-        position: absolute;
-        width: 115px;
-        height: 10%;
-        background: linear-gradient(to right,#ff105f,#ffad06);
-        border-radius: 30px;
-        transition: .5s;
-    }
-    .toggle-btn {
-        padding: 10px 30px;
-        font-family:'Poppins';
-        font-size: 22;
-        padding-left: 90;
-        margin-top: 20px;
-    }
-    .social-icons {
-        margin: 40px auto;
-    }
-    .social-icons img {
-        width: 40px;
-    }
-    .input-field {
-        width: 100%;
-        padding: 10px 0;
-        margin: 5px 0;
-        border-left: 0;
-        border-top: 0;
-        border-right: 0;
-        border-bottom: 2px solid #999;
-        outline: none;
-        background: transparent;
-        font-size: 25;
-    }
-    span {
-        color: #777;
-        font-size: 20px;
-        bottom: 72px;
-        position: absolute;
-    }
-    .submit-btn {
-        width: 115px;
-        height: 50;
-        padding: 4px;
-        margin-bottom: 50px;
-        cursor: pointer;
-        display: block;
-        margin: auto;
-        background: linear-gradient(to right,#ff105f,#ffad06);
-        border: 0;
-        outline: none;
-        border-radius: 30px;
-        font-family: 'Poppins';
-        font-size: 20;
-    }
-    .input-group {
-        top: 180px;
-        position: absolute;
-        width: 280px;
-        transition: .5s;
-        margin-left: 22px;
-    }
-    .hero {
-        height: 50%;
-    }
-}
-@media screen and (max-width:411px){
-   
-    main{
-        width:865px;
-    }
-    .container{
-        width:850px;
-        
-    }
-    .current{
-        font-size: 23px;
-    }
-    header .highlight,header .current a{
-        font-size:23px;
-    }
-    header img {
-       
-        height: 150px;
-        width: 150px;
-    }
-    header nav{
-        padding-top: 20px;;
-    }
-    .row{
-        font-size: 20px;
-    }
-    .footer h1{
-        font-size: 25px;
-    }
-    .footer p{
-        font-size:23px;
-    }
-    .footer li{
-        font-size: 19px;
-    }
-    .footer .special p{
-        font-size: 18px;
-    }
-    li ,a{
         height: auto;
+    }
     
-    }
-    .services .colum p{
-        font-size: 21px;;
-    }
-    .hero {
-        width: 100%;
-        height: 1600;
-    }
-        .form-box {
-            width: 493;
-            height: 800;
-            top: 300;
 }
-#btn {
-    top: 57px;
-    left: 60px;
-    width: 150px;
-}
-.button-box {
-    padding-top: 50px;
-    padding-bottom: 75;
-}
-.toggle-btn {
-    font-size: 27;
-}
-.input-group {
-    top: 350px;
-    position: absolute;
-    width: 350px;
-    transition: .5s;
-}
-.input-field {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 35px;
-    margin: 5px 0;
-    border-left: 0;
-    border-top: 0;
-    border-right: 0;
-    margin-left: 50px;
-}
-span {
-    color: #777;
-    font-size: 22px;
-    bottom: 78px;
-    position: absolute;
-    margin-left: 28;
-}
-.submit-btn {
-    width: 150;
-    height: 65px;
-    margin-left: 130px;
-    margin-top: 27px;
-    font-size: 25;
-}
-.chech-box {
-    margin: 30px 0px 0px 0;
-}   
-header{
-    height: 150px;
-    width: 864px;
-}
-} 
