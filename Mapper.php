@@ -137,8 +137,73 @@ public function update($id,$name,$email,$role){
         $statement->execute();
     
 }
-    
+public function addedit($name,$id,$time){
+    $this->query="insert into edits (username,id,time) values (:username,:id,:time)";
+    $statement=$this->connection->prepare($this->query);
+    $statement->bindParam(":username",$name);
+    $statement->bindParam(":id",$id);
+    $statement->bindParam(":time",$time);
+    $statement->execute();
 }
+public function deleteedit(){
+    $this->query="delete from edits where id=0";
+    $statement=$this->connection->prepare($this->query);
+    $statement->execute();
+
+}
+public function getedits(){
+    $this->query="select*from edits";
+    $statement=$this->connection->prepare($this->query);
+    $statement->execute();
+     return $resault=$statement->fetchAll(PDO::FETCH_ASSOC);
+}
+public function addadded($name,$prodname,$time){
+    $this->query="insert into added (username,prodname,time) values (:username,:id,:time)";
+    $statement=$this->connection->prepare($this->query);
+    $statement->bindParam(":username",$name);
+    $statement->bindParam(":id",$prodname);
+    $statement->bindParam(":time",$time);
+    $statement->execute();
+}
+public function getadded(){
+
+    $this->query="select *from added";
+    $statement=$this->connection->prepare($this->query);
+    $statement->execute();
+     return $resault=$statement->fetchAll(PDO::FETCH_ASSOC);
+}
+public function getProjekti($id){
+    $this->query="select text  from projekti where ID=:id ";
+    $statement=$this->connection->prepare($this->query);
+    $statement->bindParam(":id",$id);
+    $statement->execute();
+    return $resault =$statement->fetch(PDO::FETCH_ASSOC);
+}
+public function getService($id){
+    $this->query="select text  from service where ID=:id ";
+    $statement=$this->connection->prepare($this->query);
+    $statement->bindParam(":id",$id);
+    $statement->execute();
+    return $resault =$statement->fetch(PDO::FETCH_ASSOC);
+}
+public function getAbout($id){
+    $this->query="select text  from about where ID=:id ";
+    $statement=$this->connection->prepare($this->query);
+    $statement->bindParam(":id",$id);
+    $statement->execute();
+    return $resault =$statement->fetch(PDO::FETCH_ASSOC);
+}
+public function getFooter($id){
+    $this->query="select text  from footer where ID=:id ";
+    $statement=$this->connection->prepare($this->query);
+    $statement->bindParam(":id",$id);
+    $statement->execute();
+    return $resault =$statement->fetch(PDO::FETCH_ASSOC);
+}
+
+}
+    
+
 
 
 
