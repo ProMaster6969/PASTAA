@@ -10,26 +10,27 @@
    <?php
  include 'header.php';
     ?>   
-
-  <main>
-          <div class="hero">
+<?php
+ echo" <main>".
+          "<div class=\"hero\">".
     
-                <h1>Contact Us</h1>
+               " <h1>Contact Us</h1>".
                
-                <div class="form">
-                <form action="contactVerify.php" method="post">
-                    <input type="text" class="contact-input"id="name" name="contact-name" placeholder="Name" required></br>
-                    <input type="text" class="contact-input" id="email" name="contact-email" placeholder="E-Mail" required></br></br>
-                    <input type="text" class="contact-input"id="mesage" name="contact-message" placeholder="Message"  required></br>
+                "<div class=\"form\">".
+                "<form action=\"contactVerify.php\" method=\"post\">".
+                   " <input type=\"text\" class=\"contact-input\"id=\"name\" name=\"contact-name\" placeholder=\"Name\" required></br>".
+                   " <input type=\"text\" class=\"contact-input\" id=\"email\" name=\"contact-email\" placeholder=\"E-Mail\" required></br></br>".
+                    "<input type=\"text\" class=\"contact-input\"id=\"mesage\" name=\"contact-message\" placeholder=\"Message\"  required></br>".
         
                  
                   
-                    <button type="submit" id="letstalk"name="talk-btn" class="bttn" >Let's Talk</button></br>
+                   " <button type=\"submit\" id=\"letstalk\"name=\"talk-btn\" class=\"bttn\" >Let's Talk</button></br>".
                   
-                  </form>
-          </div>
+                  "</form>".
+         " </div>".
         
-  </main>
+  "</main>";
+  ?>
  
   <?php
  include 'footer.php';
